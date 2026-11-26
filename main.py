@@ -16,6 +16,9 @@ LINE = (
     "every hour to ask if she's eaten."
 )
 
+# Bounty gate: the entry must be a single line of 1-200 characters.
+assert 1 <= len(LINE) <= 200, f"entry line is {len(LINE)} chars, must be 1-200"
+
 
 def main() -> None:
     os.makedirs("/output", exist_ok=True)
